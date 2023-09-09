@@ -8,6 +8,13 @@ void print_twice(char phil) {
 
 int main() {
 	char arguement = 'b';
-	print_twice(arguement);
+	int arguement2 = 4;
+	double arguement3 = 10.10;
+	string arguement4 = "tryme";
+	print_twice(argument);
+	print_twice(arguemnt2);
+	print_twice(argument3);
+	print_twice(argument4);	
+
 	return 0;
 }
