@@ -10,7 +10,7 @@ void new_line()
 int main()
 {
 cout << "first Line." << endl;
-newLine();
+new_line();
 cout << "Second Line."<< endl;
 return 0;
 }
