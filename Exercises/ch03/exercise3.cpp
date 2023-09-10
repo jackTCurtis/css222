@@ -7,9 +7,20 @@ if ((inp2 == 0)&&(!(inp1==0))) {
 inp2 = rand() % 100;
 cout << "Your summary is " << inp1 << "+" << inp2 << "=" << inp1 + inp2 << endl;
 }
+if ((inp2 == 0)&&(inp1==0)) {
+inp2 = rand() % 100;
+inp1 = rand() % 100;
+cout << "Your summary is " << inp1 << "+" << inp2 << "=" << inp1 + inp2 << endl;
 }
+if ((!(inp2 == 0))&&(!(inp1==0))) {
+cout << "Your summary is " << inp1 << "+" << inp2 << "=" << inp1 + inp2 << endl;
+}
+}
+
 int main(){
 rndmnumbergenerator(10,0);
+rndmnumbergenerator(0,0);
+rndmnumbergenerator(14,10);
 return 0;
 }
 
