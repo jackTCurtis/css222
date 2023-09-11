@@ -10,6 +10,7 @@ if (a>b) {
 } else {
     cout<<a<<"is less than " << b;
 }
+return 0;
 }
 int main(){
     compare(10,5);
