@@ -26,5 +26,6 @@ int main(){
  rndmnumbergenerator(10,0);
  rndmnumbergenerator(0,0);
  rndmnumbergenerator(18,22);
+ pointlessfunction2() + 8;
 }
 
