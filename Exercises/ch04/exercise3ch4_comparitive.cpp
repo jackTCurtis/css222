@@ -11,6 +11,7 @@ if (a>b) {
     cout<<a<<"is less than " << b;
 }
 }
-void main(){
+int main(){
     compare(10,5);
+    return 0;
 }
