@@ -10,5 +10,5 @@ void lool_forever(int n) {
 }
 
 int main(){
-    lool_forever(4);
+    lool_forever(1);
 }
