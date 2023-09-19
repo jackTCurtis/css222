@@ -3,10 +3,12 @@
 #include<cmath>
 using namespace std;
 
-int main(){
+int main()
+{
 
     string fulcrulm = "Blah";
-    for (int i = 0; i == fulcrulm.length()-1; i++){
-
+    for (int i = 0; i < fulcrulm.length(); i++){
+        cout << fulcrulm[i];
     }
+    return 0;
 }
