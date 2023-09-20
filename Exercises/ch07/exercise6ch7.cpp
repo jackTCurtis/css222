@@ -18,9 +18,9 @@ int main()
     while(i < inputstr.length()-1)
     {
        if (isupper(inputstr[i])){
-            uppers+inputstr[i];
+            uppers = uppers+inputstr[i];
        } else if (islower(inputstr[i])){
-            lowers+inputstr[i];
+            lowers = lowers+inputstr[i];
        } else{
         cout<<"Error, probably not a letter"<<endl;
        }
