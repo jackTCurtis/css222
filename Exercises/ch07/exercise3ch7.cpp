@@ -8,9 +8,9 @@ string count_letters(int intinp, string strinp, string state){
     int count = 0;
 
     for (int index = 0; index < state.length(); index++){
-        if ((state[index] == to_string(intinp)) || (state[index] == strinp)){
-            cout << "blah blah blah";
-        }
+        //if ((state[index] == to_string(intinp)) || (state[index] == strinp)){
+        //    cout << "blah blah blah";
+        //}
     }
     cout << count << endl;
     return 0;
