@@ -3,34 +3,22 @@
 #include <string>
 using namespace std;
 
-string count_letters(int intinp, string strinp, string state){
-    string state = "Mississippi";
+string count_letters(char charinp, string strinp){
+    
     int count = 0;
+    string state = "Mississippi";
 
     for (int index = 0; index < state.length(); index++){
-        //if ((state[index] == to_string(intinp)) || (state[index] == strinp)){
-        //    cout << "blah blah blah";
-        //}
+        if ((to_string((state[index])) == to_string(charinp)) || ((to_string(state[index])) == strinp)){
+            count++;
+        }
     }
+
+    
     cout << count << endl;
     return 0;
 }
 
-//((state[index] == to_string(intinp)) || (state[index] == strinp))
-
 int main(){
-    /*
-    string state = "Mississippi";
-    int count = 0;
-    int index = 0;
-
-    while (index < state.length()) {
-        if (state[index] == 'i') {
-            count = count + 1;
-        }
-        index = index + 1;
-    }
-    cout << count << endl;
-*/
-
+    count_letters('p',"Miss");
 }
