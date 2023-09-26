@@ -3,7 +3,15 @@
 #include <cmath>
 using namespace std;
 
-
+void reverseStr(string& str)
+{
+    int n = str.length();
+ 
+    // Swap character starting from two
+    // corners
+    for (int i = 0; i < n / 2; i++)
+        swap(str[i], str[n - i - 1]);
+}
 
 int main(){
     int inputnum;
@@ -32,6 +40,7 @@ int main(){
     int e = 0;
     bool Lycherbool = false;
     while ((e!=(maxops))&&(Lycherbool == false)){
+        
         //multiplyer
         inputnum = inputnum * 2;
         bufferstring = (to_string(inputnum));
@@ -62,8 +71,11 @@ int main(){
             }
     }
     
+        //string reverser
+        string temprightstring = righthalf;
+        reverseStr(temprightstring);
         //chechker
-        if (lefthalf == righthalf){
+        if (lefthalf == temprightstring){
             Lycherbool = true;
             cout << "After " << e << " iterations, your input has reached a non-Lycherl number of:" << inputnum;
         }else{
