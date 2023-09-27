@@ -1,10 +1,14 @@
 #include <iostream>
+#include <cmath>
 #include <string>
 using namespace std;
 
 int main(){
-    string test1 = "Blank";
-    string test2;
-    test2 + test1;
-    cout << test2;
+    string a = "blah";
+    string b = "blah";
+    if ( a == b){
+        cout<< "yes";
+    }
+    //(10*(to_string(testvar).length()))
+
 }
