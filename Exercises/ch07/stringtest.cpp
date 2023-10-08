@@ -4,11 +4,12 @@
 using namespace std;
 
 int main(){
-    string a = "blah";
-    string b = "blah";
-    if ( a == b){
-        cout<< "yes";
+    int array =[1,5,7,20];
+    int bruhhh = 7;
+    
+    if (bruhhh == array)
+    {
+    cout << "gang gang";
     }
-    //(10*(to_string(testvar).length()))
-
+    
 }

@@ -50,7 +50,7 @@ int main()
     cout << "address of x: " << long(&x) << endl;
     cout << "address of y: " << long(&y) << endl;
     cout << "Calling will swap pointers..." << endl;
-    will_swap_with_pointers(x, y);
+    //will_swap_with_pointers(x, y);
 
     
 
