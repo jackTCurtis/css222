@@ -18,10 +18,16 @@ int main(){
     }
 
     //filter1   
-    for (int i = 0; i < sizeof(inputarray) / sizeof(int); i++)
+    cout << "---------" << endl;
+    int pointeraverage;
+    int i;
+    for (i = 0; i < sizeof(inputarray) / sizeof(int); i++)
     {
-        cout << inputarray[i] << "\t"<< "Location: "<<long(&inputarray[i])<<"\n";
+        cout << *(&inputarray+i*4) << "\t"<< "Location: "<<long(&inputarray+i*4)<<"\n";
+        pointeraverage=+long(&inputarray[i]);
     }
-    
-    
+    cout << "Location of array: "<< long(&inputarray+i*4)<< endl;
+    cout << "---------" << endl;
+    cout << "Pointer Average: " << pointeraverage/ i;
+
 }
