@@ -3,6 +3,6 @@
 using namespace std;
 
 int main(){
-    Fraction numerator = 10;
-    Fraction denomator = 2;
+    Fraction myclone(10,2);
+    Fraction print;
 }
