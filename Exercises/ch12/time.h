@@ -1,10 +1,9 @@
 struct Time { 
-    double seconds;
-    int dayOfWeek, hours, minutes;
+    double second;
+    int week, hour, minute;
     void increment(double parameterSeconds);
 
     void printTime();
-    bool after(Time pTime);
     double convertToSeconds() const;
     Time add(Time t2);
 

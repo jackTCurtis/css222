@@ -19,7 +19,7 @@ void Time::increment(double secs) {
     week += int(secs/86400);
     secs -= week * 86400;
     hour += int(secs / 3600);
-    secs -= hours * 60;
+    secs -= hour * 60;
     minute += int(secs / 60);
     secs -= minute * 60;
     second += secs;
