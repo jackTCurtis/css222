@@ -26,10 +26,25 @@ string Card::to_string()const{
 bool Card::equals(const Card& c2) const{
     return (rank==c2.rank && suit == c2.suit);
 }
+bool Card::is_greater(const Card& c2) const
+{
+    // first check the suits
+    if (suit > c2.suit) return true;
+    if (suit < c2.suit) return false;
+
+    // if suits are equal, check ranks
+    if (rank > c2.rank) return true;
+    if (rank < c2.rank) return false;
+
+    // if ranks are equal too, 1st card is not greater than the 2nd
+    return false;
+    if (suit < c2.suit) return false;
+}
 int main(){
+    vector<Card> deck(52);
     Card card1(1,11);
     Card card2(1,11);
-    if (card1.equals(card2)){
-        cout<<"Yup, that's the same card"<<endl;
+    if (card1.is_greater(card2)){
+        cout << card1.to_string()<< " is greater than " <<card2.to_string()<< endl;
     }
 }
