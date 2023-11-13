@@ -10,4 +10,8 @@ Classroom::TeacherName = Classroom::StudentList[rand()%Classroom::StudentList.si
 Classroom::ClassroomType=Classroom::TypeofClass[rand()%Classroom::TypeofClass.size()]
 Classroom::NumofStudents=rand()%35;
 //need to generate studentes
+for(int i=0;i<Classroom::NumofStudents;i++){
+Classroom::Studentnamecontainer[i]=Classroom::StudentList[rand()%Classroom::StudentList.size()]
+}
+
 }
