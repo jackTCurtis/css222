@@ -1,3 +1,4 @@
+using namespace std;
 struct Classroom{
     string TeachersName;
     string ClassroomType;
@@ -12,4 +13,4 @@ struct Classroom{
 
 
     
-}
+};
