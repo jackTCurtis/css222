@@ -9,7 +9,6 @@ Fraction::Fraction(int n, int d){
 
 void Fraction::print(){
     cout << "Numerator:" << numerator << endl <<"Denominator:" << denominator << endl; 
-
 }
 void Fraction::plus(Fraction& fruct){
     numerator *= fruct.denominator;
