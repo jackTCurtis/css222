@@ -40,6 +40,9 @@ double Complex::get_theta(){
     if (polar == false) calculate_polar;
     return theta;
 }
+void Complex::abs(){
+    return Complex(abs(real),abs(imag));
+}
 string Complex::str_cartesian(){
     return to_string(get_real()) + " + " + to_string(get_imag()) + "i";
 }

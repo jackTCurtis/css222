@@ -15,6 +15,7 @@ class Complex
     // private accessors
     void calculate_polar();
     void calculate_cartesian();
+    void abs();
 
 public:
     // constructors
