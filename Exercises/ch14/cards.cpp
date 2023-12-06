@@ -3,9 +3,9 @@
 #include "Card.h"
 using namespace std;
 
-struct Deck;
+//struct Deck;
 
-int find(const Deck& deck) const;
+//int find(const Deck& deck) const;
 
 Card::Card(){
     suit = SPADES;
@@ -16,7 +16,8 @@ Card::Card(Suit s, Rank r){
     rank = r;
 }
 
-string Card::string to_string() const{
+string Card::to_string() const{
+    string suit_str, rank_str = "";
 
     switch(suit) {
         case CLUBS: return "Clubs";
@@ -43,7 +44,7 @@ string Card::string to_string() const{
         case KING: return "King";
         default: return "Not a valid rank"
     }
-
+    return rank_str +" of "+suit_str;
 }
 
 //deck initializer
@@ -84,4 +85,16 @@ int Card::find(const Deck& deck) const
         if (deck.cards[i].equals(*this)) return i;
     }
     return -1;
+}
+void Deck::shuffle() const{
+    for (int i = 0; i < cards.size(); i++) {
+    // choose a random number between i and cards.size()
+    // swap the ith card and the randomly-chosen card
+    
+}
+}
+
+int main(){
+    Deck::print()
+    return 0;
 }

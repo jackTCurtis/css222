@@ -54,7 +54,22 @@ Complex Complex::operator * ( Complex& c){
     if (c.polar == false) c.calculate_polar();
     return Complex(real + c.real, imag + c.imag);
 }
+Complex Complex::operator - (const Complex& c) {
+    return Complex(real - c.real, imag - c.imag);
+}
 
+Complex Complex::operator / (Complex& c) {
+    if (polar == false) {
+        this->calculate_polar();
+    }
+    if (c.polar == false) {
+        c.calculate_polar();
+    }
+
+    Complex num(mag / c.mag, theta - c.theta, POLAR);
+    num.calculate_cartesian();
+    return num;
+}
 
 
         
