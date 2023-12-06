@@ -15,6 +15,9 @@ Complex::Complex(double m, double t, Flag){
     polar = true;
     calculate_cartesian();
 }
+string Complex::to_string(){
+    return to_string(real) + " + " + to_string(imag) + "i";
+}
 
 double Complex::get_real(){
     return real;

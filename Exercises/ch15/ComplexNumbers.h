@@ -17,6 +17,8 @@ class Complex
     void calculate_cartesian();
     void abs();
 
+    string to_string();
+
 public:
     // constructors
     Complex();
