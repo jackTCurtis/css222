@@ -1,8 +1,11 @@
 
 class Duration{
-    int digit;
-
     public:
-    string to_string();
-    
+    int digit;
+    int days;
+    int hours;
+    int minutes;
+    int seconds;
+    string to_string() const;
+
 }
