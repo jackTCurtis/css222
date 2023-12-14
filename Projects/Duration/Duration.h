@@ -1,4 +1,4 @@
-
+using namespace std;
 class Duration{
     public:
     int digit;
@@ -6,6 +6,6 @@ class Duration{
     int hours;
     int minutes;
     int seconds;
-    string to_string() const;
+    void to_string();
 
-}
+};
