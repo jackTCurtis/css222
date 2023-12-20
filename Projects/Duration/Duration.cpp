@@ -33,7 +33,9 @@ void Duration::to_string(){
        
     }}
     
-    cout<< "output:"<<endl<<"days: "<<days<<endl<<"hours: "<<hours<<endl<<"minutes: "<<minutes<<endl<<"seconds: "<<seconds;
+    //cout<< "output:"<<endl<<"days: "<<days<<endl<<"hours: "<<hours<<endl<<"minutes: "<<minutes<<endl<<"seconds: "<<seconds;
+
+    cout<<"PT"<<days<<"D"<<hours<<"H"<<minutes<<"M"<<seconds<<"S";
     }
     
 }
