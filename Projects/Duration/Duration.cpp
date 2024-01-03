@@ -2,34 +2,62 @@
 #include <iostream>
 using namespace std;
 
+Duration::Duration(){
+    digit = 0;
+}
+Duration::Duration(int x){
+    digit=x;
+}
+Duration Duration::operator- (Duration& d){
+    return Duration(digit - d.digit);
+}
+Duration Duration::operator+ (Duration& d){
+    return Duration(digit + d.digit);
+}
+
+//indeoendent variable calls
+int Duration::seconds(){
+    return digit;
+}
+int Duration::minutes(){
+    return digit/60;
+}
+int Duration::hours(){
+    return digit/3600;
+}
+int Duration::days(){
+    return digit/86400;
+}
+
 void Duration::to_string(){
-    if (digit == 0)
+    cdigit=digit;
+    if (cdigit == 0)
     {
-        seconds=digit;
+        seconds=cdigit;
         
         cout << seconds;
     }else{
     
-    while (digit > 0)
+    while (cdigit > 0)
     {
-    if ((digit - 86400)>=0)
+    if ((cdigit - 86400)>=0)
     {
-        digit = digit- 86400;
+        cdigit = cdigit- 86400;
         days = days + 1;
         //theyre 86400 seconds in a day
-    }else if((digit - 3600)>=0){
-        digit = digit - 3600;
+    }else if((cdigit - 3600)>=0){
+        cdigit = cdigit - 3600;
         hours = hours + 1;
-        //theyre 3600
+        //theyre 3600 seconds in a hour
         
-    }else if((digit - 60)>=0){
-        digit = digit - 60;
+    }else if((cdigit - 60)>=0){
+        cdigit = cdigit - 60;
         minutes = minutes + 1;
-        //theyre 60 sceonds in a day
+        //theyre 60 sceonds in a minute
        
     }else{ 
-        seconds = digit;
-        digit = 0;
+        seconds = cdigit;
+        cdigit = 0;
        
     }}
     
@@ -50,20 +78,12 @@ void Duration::to_string(){
     } if (seconds>0)
     {
         cout<<seconds<<"S";
+    } 
     }
-    
-    
-    
-        
-    }
-    
-    
-    
     }
     
 
 int main(){
-Duration tinyobj;
-tinyobj.digit = 3600;
+Duration tinyobj(600);
 tinyobj.to_string();
 }
