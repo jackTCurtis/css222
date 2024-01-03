@@ -33,9 +33,9 @@ void Duration::to_string(){
     cdigit=digit;
     if (cdigit == 0)
     {
-        seconds=cdigit;
+        cseconds=cdigit;
         
-        cout << seconds;
+        cout << cseconds;
     }else{
     
     while (cdigit > 0)
@@ -43,20 +43,20 @@ void Duration::to_string(){
     if ((cdigit - 86400)>=0)
     {
         cdigit = cdigit- 86400;
-        days = days + 1;
+        cdays = cdays + 1;
         //theyre 86400 seconds in a day
     }else if((cdigit - 3600)>=0){
         cdigit = cdigit - 3600;
-        hours = hours + 1;
+        chours = chours + 1;
         //theyre 3600 seconds in a hour
         
     }else if((cdigit - 60)>=0){
         cdigit = cdigit - 60;
-        minutes = minutes + 1;
+        cminutes = cminutes + 1;
         //theyre 60 sceonds in a minute
        
     }else{ 
-        seconds = cdigit;
+        cseconds = cdigit;
         cdigit = 0;
        
     }}
@@ -64,20 +64,20 @@ void Duration::to_string(){
     //cout<< "output:"<<endl<<"days: "<<days<<endl<<"hours: "<<hours<<endl<<"minutes: "<<minutes<<endl<<"seconds: "<<seconds;
     //cout<<"PT"<<days<<"D"<<hours<<"H"<<minutes<<"M"<<seconds<<"S"<<endl;
     cout<<"P";
-    if (days>0)
+    if (cdays>0)
     {
-        cout<<days<<"D";
+        cout<<cdays<<"D";
     }
     cout<<"T";
-    if (hours>0)
+    if (chours>0)
     {
-        cout<<hours<<"H";
-    } if (minutes>0)
+        cout<<chours<<"H";
+    } if (cminutes>0)
     {
-        cout<<minutes<<"M";
-    } if (seconds>0)
+        cout<<cminutes<<"M";
+    } if (cseconds>0)
     {
-        cout<<seconds<<"S";
+        cout<<cseconds<<"S";
     } 
     }
     }

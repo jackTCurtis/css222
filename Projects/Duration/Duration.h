@@ -7,10 +7,14 @@ class Duration{
     int digit;
     int cdigit;
     //clone digit
-    int days = 0;
-    int hours = 0;
-    int minutes = 0;
-    int seconds = 0;
+    int cdays = 0;
+    int days();
+    int chours = 0;
+    int hours();
+    int cminutes = 0;
+    int minutes();
+    int cseconds = 0;
+    int seconds();
     void to_string();
     Duration operator + (Duration& d);
     Duration operator - (Duration& d);
