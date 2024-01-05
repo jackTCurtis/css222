@@ -9,6 +9,8 @@ using namespace std;
 TEST_CASE("Test can create and render a Duration") {
     Duration d;
     CHECK(d.to_string() == "PT0S");
+
+    
     Duration d2(42);
     CHECK(d2.to_string() == "PT42S");
     Duration d3(200);
