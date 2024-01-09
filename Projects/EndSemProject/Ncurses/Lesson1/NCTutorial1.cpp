@@ -16,6 +16,8 @@ int main(int argc,char ** argv){
     int c = getch();
     printw("%d",c);
 
+    getch();
+
     //deallocates memory and ends ncurses
     endwin();
     return 0;
