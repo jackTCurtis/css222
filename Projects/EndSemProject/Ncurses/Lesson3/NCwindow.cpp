@@ -9,7 +9,7 @@ int main(int argc,char ** argv){
     WINDOW * win = newwin(10,20,10,10);
 	refresh();
 	box(win,0,0);
-	wprintw(win,"hello window");
+	mvwprintw(win,1,1,"hello window");
 	wrefresh(win);
     	//refreshes the screen to match it to whats on memory
     	refresh();
