@@ -5,7 +5,7 @@ int main(int argc,char ** argv){
     
     initscr();
 
-    // moving cursor, x = 20, y = 10
+    // coordinate is y, x
     move(10, 20);
 
     printw("I am here...");
