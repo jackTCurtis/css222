@@ -9,8 +9,9 @@ int main(int argc,char ** argv){
     //newwin(height, width, start_y, start_x);
     WINDOW * win = newwin(10,20,10,10);
 	refresh();
-	box(win,103,0);
-	mvwprintw(win,1,1,"hello window");
+	//box(win,0,0);
+	wborder(win,104,104,103,103,97,97,97,97);
+	mvwprintw(win, 1,1, "this is a box yes");
 	wrefresh(win);
     	//refreshes the screen to match it to whats on memory
     	refresh();
