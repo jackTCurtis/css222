@@ -1,5 +1,11 @@
 #include <ncurses.h>
+#include <snake.h>
 using namespace std;
+
+#define BOARD_DIM 20
+#define BOARD_ROW BOARD_DIM
+#define BOARD_COLS BOARD_DIM * 2.5
+
 //snake through vim keybinds, h,j,k,l
 int main(int argc, char ** argv){
 initscr();
@@ -9,7 +15,9 @@ int tHeight;
 int tLength;
 getmaxyx(stdscr,tHeight,tLength);
 
-WINDOW * boardWindo = newwin(20,20,(tHeight/2)-10,(tLength/2)-10);
+
+
+WINDOW * boardWindo = newwin(BOARD_ROW,BOARD_COLS,(tHeight/2)-(BOARD_ROW/2),(tLength/2)-(BOARD_COLS/2));
 box(boardWindo, 0 ,0);
 wrefresh(boardWindo);
 
