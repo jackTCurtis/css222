@@ -1,5 +1,5 @@
 #include <ncurses.h>
-#include <snake.h>
+#include "snake.h"
 using namespace std;
 
 #define BOARD_DIM 20
@@ -11,15 +11,7 @@ int main(int argc, char ** argv){
 initscr();
 refresh();
 
-int tHeight;
-int tLength;
-getmaxyx(stdscr,tHeight,tLength);
-
-
-
-WINDOW * boardWindo = newwin(BOARD_ROW,BOARD_COLS,(tHeight/2)-(BOARD_ROW/2),(tLength/2)-(BOARD_COLS/2));
-box(boardWindo, 0 ,0);
-wrefresh(boardWindo);
+Board baord(BOARD_ROW,BOARD_COLS);
 
 getch();
 endwin();
