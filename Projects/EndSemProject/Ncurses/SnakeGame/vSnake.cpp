@@ -11,7 +11,10 @@ int main(int argc, char ** argv){
 initscr();
 refresh();
 
-Board baord(BOARD_ROW,BOARD_COLS);
+Board board(BOARD_ROW,BOARD_COLS);
+board.initlize();
+board.addAt(5,5,'0');
+board.refresh();
 
 getch();
 endwin();

@@ -23,7 +23,12 @@ class Board{
     void addBorder(){
         box(boardWindo,0,0);
     }
-
+    void addAt(int y, int x, chtype ch){
+        mvwaddch(boardWindo,y,x,ch);
+    }
+    chtype getInput(){
+        return wgetch(boardWindo);
+    }
     void clear(){
         wclear(boardWindo);
         addBorder();
