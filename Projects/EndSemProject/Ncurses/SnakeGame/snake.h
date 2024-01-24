@@ -9,12 +9,27 @@ class Board{
         getmaxyx(stdscr,tHeight,tLength);
 
         boardWindo = newwin(height,width,(tHeight/2)-(height/2),(tLength/2)-(width/2));
-        box(boardWindo, 0 ,0);
-        wrefresh(boardWindo);
+        initlize();
+
 
         this->height = height;
         this->width = width;
 
+    }
+    void initlize(){
+        clear();
+        refresh();
+    }
+    void addBorder(){
+        box(boardWindo,0,0);
+    }
+
+    void clear(){
+        wclear(boardWindo);
+        addBorder();
+    }
+    void refresh(){
+        wrefresh(boardWindo);
     }
     private:
     WINDOW *boardWindo;
