@@ -3,6 +3,11 @@ using namespace std;
 class Board{
     
     public:
+    int secondsClock;
+    chtype Direction; //h = left j = up k = down l right
+    int SnakeX, SnakeY;
+
+
     Board(int height, int width){
         int tHeight;
         int tLength;
@@ -17,8 +22,14 @@ class Board{
 
     }
     void initlize(){
+        SnakeX = 15;
+        SnakeY = 15;
         clear();
         refresh();
+    }
+    void checkDirection(){
+        Direction = wgetch(boardWindo);
+        // thiw will get other keys being pressed but only hjkl are important
     }
     void addBorder(){
         box(boardWindo,0,0);

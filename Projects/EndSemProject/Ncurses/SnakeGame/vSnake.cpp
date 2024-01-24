@@ -13,8 +13,41 @@ refresh();
 
 Board board(BOARD_ROW,BOARD_COLS);
 board.initlize();
-board.addAt(5,5,'0');
-board.refresh();
+/*
+25 supdates will kill the game so once it hits 25
+it will set back to 1, the idea is to be able to kill the 
+game if a player looses it will set it too 26 seconds.
+*/
+/*
+this is the main updater for this current version
+*/
+while (board.secondsClock<26)
+{
+    board.secondsClock++;
+    if (board.secondsClock == 25)
+    {
+        board.checkDirection();
+    switch (board.Direction){
+        case 'h':
+            board.addAt(board.SnakeX,board.SnakeY,'0');
+            break;
+        case 'j':
+
+            break;
+        case 'k':
+
+            break;
+        case 'l':
+
+            break;
+    }
+    board.secondsClock = 0;
+    }
+    board.refresh();
+
+}
+
+
 
 getch();
 endwin();
