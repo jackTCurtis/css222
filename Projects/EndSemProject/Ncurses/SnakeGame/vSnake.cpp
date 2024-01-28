@@ -8,6 +8,7 @@ using namespace std;
 //snake through vim keybinds, h,j,k,l
 int main(int argc, char ** argv){
 initscr();
+noecho();
 refresh();
 
 SnakeGame game(BOARD_ROW,BOARD_COLS);
