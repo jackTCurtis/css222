@@ -19,9 +19,11 @@ class SnakeGame{
     }
     void redraw(){
         board.refresh();
+        //refreshes board
     }
     bool isOver(){
         return game_over;
+        //checks if the game is over
     }
     private:
     Board board;
