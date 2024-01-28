@@ -1,5 +1,6 @@
 #include <ncurses.h>
-#include "snake.h"
+#include <vSnake.h>
+#include "board.h"
 using namespace std;
 #define BOARD_DIM 20
 #define BOARD_ROW BOARD_DIM
@@ -12,8 +13,7 @@ refresh();
 Board baord(BOARD_ROW,BOARD_COLS);
 Board board(BOARD_ROW,BOARD_COLS);
 board.initlize();
-board.addAt(5,5,'0');
-board.refresh();
+
 
 getch();
 endwin();

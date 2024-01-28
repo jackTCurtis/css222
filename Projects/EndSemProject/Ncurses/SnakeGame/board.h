@@ -1,15 +1,12 @@
 using namespace std;
 class Board{
-    
+    Board(){
+        construct(0,0);
+    }
     public:
     Board(int height, int width){
-        int tHeight;
-        int tLength;
-        getmaxyx(stdscr,tHeight,tLength);
-        boardWindo = newwin(height,width,(tHeight/2)-(height/2),(tLength/2)-(width/2));
-        initlize();
-        this->height = height;
-        this->width = width;
+        
+        construct(height,width)
     }
     void initlize(){
         clear();
@@ -34,5 +31,12 @@ class Board{
     }
     private:
     WINDOW *boardWindo;
-    int height, width;
+    
+    void construct(int height, int width){
+        int cHeight;
+        int cLength;
+        getmaxyx(stdscr,cHeight,cLength);
+        boardWindo = newwin(height,width,(tHeight/2)-(height/2),(tLength/2)-(width/2));
+
+    }
 };
