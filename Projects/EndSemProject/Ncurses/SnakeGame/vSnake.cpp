@@ -1,5 +1,6 @@
 #include <ncurses.h>
 #include "snake.h"
+#include <iostream>
 using namespace std;
 
 #define BOARD_DIM 20
@@ -10,7 +11,7 @@ using namespace std;
 int main(int argc, char ** argv){
 initscr();
 refresh();
-
+bool colorFlipper = true;
 Board board(BOARD_ROW,BOARD_COLS);
 board.initlize();
 /*
@@ -21,26 +22,46 @@ game if a player looses it will set it too 26 seconds.
 /*
 this is the main updater for this current version
 */
+cbreak();
+noecho();
+
+board.secondsClock = 0;
 while (board.secondsClock<26)
 {
-    board.secondsClock++;
-    if (board.secondsClock == 25)
+    board.secondsClock=board.secondsClock+1;
+    if (board.secondsClock ==  25)
     {
-        board.checkDirection();
+        if (colorFlipper == true)
+        {
+            attron(A_REVERSE);
+            board.addAt(board.SnakeX,board.SnakeY,'0');
+            colorFlipper = false;
+        }
+        else{
+            attroff(A_REVERSE);
+            board.addAt(board.SnakeX,board.SnakeY,'0');
+            colorFlipper = true;
+        }
+        wrefresh(*boardWindo);
+    /*
     switch (board.Direction){
         case 'h':
-            board.addAt(board.SnakeX,board.SnakeY,'0');
+            board.SnakeX--;
+            board.addAt(board.SnakeY,board.SnakeX,'0');
             break;
         case 'j':
-
+            board.SnakeY++;
+            board.addAt(board.SnakeY,board.SnakeX, '0');
             break;
         case 'k':
-
+            board.SnakeY--;
+            board.addAt(board.SnakeY,board.SnakeX, '0');
             break;
         case 'l':
-
+            board.SnakeX++;
+            board.addAt(board.SnakeY,board.SnakeX, '0');
             break;
-    }
+    }*/
     board.secondsClock = 0;
     }
     board.refresh();
@@ -49,6 +70,7 @@ while (board.secondsClock<26)
 
 
 
+getch();
 getch();
 endwin();
 return 0;
