@@ -1,5 +1,5 @@
 #include <ncurses.h>
-#include <vSnake.h>
+#include "vSnake.h"
 #include "board.h"
 using namespace std;
 #define BOARD_DIM 20
@@ -10,9 +10,14 @@ int main(int argc, char ** argv){
 initscr();
 refresh();
 
-Board baord(BOARD_ROW,BOARD_COLS);
-Board board(BOARD_ROW,BOARD_COLS);
-board.initlize();
+SnakeGame game(BOARD_ROW,BOARD_COLS);
+
+while (!game.isOver())
+{
+    game.processInput();
+    game.updateState();
+    game.redraw();
+}
 
 
 getch();

@@ -1,12 +1,14 @@
+#pragma once
 using namespace std;
 class Board{
+    
+    public:
     Board(){
         construct(0,0);
     }
-    public:
     Board(int height, int width){
         
-        construct(height,width)
+        construct(height,width);
     }
     void initlize(){
         clear();
@@ -36,7 +38,7 @@ class Board{
         int cHeight;
         int cLength;
         getmaxyx(stdscr,cHeight,cLength);
-        boardWindo = newwin(height,width,(tHeight/2)-(height/2),(tLength/2)-(width/2));
+        boardWindo = newwin(height,width,(cHeight/2)-(height/2),(cLength/2)-(width/2));
 
     }
 };
