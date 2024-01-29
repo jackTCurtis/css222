@@ -1,4 +1,6 @@
 #pragma once
+#include<time.h>
+#include<stdlib.h>
 #include "Drawlabe.hpp"
 
 using namespace std;
@@ -30,6 +32,9 @@ class Board{
     chtype getInput(){
         return wgetch(boardWindo);
     }
+    void getEmptyCoordinates(int& y, int& x){
+        while((mvwinch(boardWindo, y = rand()% height,  x = rand() % width)) == ' ');
+    }
     void clear(){
         wclear(boardWindo);
         addBorder();
@@ -40,10 +45,13 @@ class Board{
     }
     private:
     WINDOW *boardWindo;
-    
+    int height, width;
+
     void construct(int height, int width){
         int cHeight;
         int cLength;
+        this->height = height;
+        this-> width = width;
         getmaxyx(stdscr,cHeight,cLength);
         boardWindo = newwin(height,width,(cHeight/2)-(height/2),(cLength/2)-(width/2));
         //constructs the board window and scales properly to the terminals dimension
