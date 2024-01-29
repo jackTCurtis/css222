@@ -1,6 +1,7 @@
 #include <ncurses.h>
-#include "vSnake.h"
-#include "board.h"
+#include "vSnake.hpp"
+#include "board.hpp"
+#include "Drawlabe.hpp"
 using namespace std;
 #define BOARD_DIM 20
 #define BOARD_ROW BOARD_DIM

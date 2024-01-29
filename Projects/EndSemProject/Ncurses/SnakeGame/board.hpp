@@ -1,4 +1,6 @@
 #pragma once
+#include "Drawlabe.hpp"
+
 using namespace std;
 class Board{
     //all of these member functions are part of the board
@@ -18,7 +20,9 @@ class Board{
         box(boardWindo,0,0);
         //draws the board window
     }
-
+    void add(Drawable drawable){
+        addAt(drawable.getY(), drawable.getX(), drawable.getIcon());
+    }
     void addAt(int y, int x, chtype ch){
         mvwaddch(boardWindo,y,x,ch);
         //places a character

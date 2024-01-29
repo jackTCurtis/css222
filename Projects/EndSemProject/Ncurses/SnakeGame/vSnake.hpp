@@ -1,6 +1,8 @@
 #pragma once
 #include <ncurses.h>
-#include "board.h"
+#include "board.hpp"
+#include "Drawlabe.hpp"
+
 
 class SnakeGame{
     public:
@@ -15,7 +17,7 @@ class SnakeGame{
     }
     //updates all information in the game like the score, snake, apple, etc.
     void updateState(){
-
+        board.add(Drawable(3, 3, '#'));
     }
     void redraw(){
         board.refresh();

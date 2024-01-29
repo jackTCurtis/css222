@@ -2,13 +2,13 @@
 //this header file is to draw everything that needs to be drawed
 //it could've been fit into the vSnake Header but it would've been a mess
 //of member functions
-class Drawlable {
+class Drawable {
     public:
-    Drawlable(){
+    Drawable(){
         y = x = 0; // top left corner by defualt
         icon = ' '; // blank
     }
-    Drawlable(int y, iny x, chtype ch){
+    Drawable(int y, int x, chtype ch){
         this->y=y;
         this->x=x;
         this->icon = ch;
